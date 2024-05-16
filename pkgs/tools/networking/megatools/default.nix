@@ -15,12 +15,11 @@
 
 stdenv.mkDerivation rec {
   pname = "megatools";
-  version = "1.11.0";
+  version = "1.11.1";
 
-  src = fetchgit {
-    url = "https://megous.com/git/megatools";
-    rev = version;
-    sha256 = "sha256-Q9hMJBQBenufubbmeAw8Q8w+Oo+UcZLWathKNDwTv3s=";
+  src = builtins.fetchTarball {
+    url = "https://megatools.megous.com/builds/megatools-1.11.1.20230212.tar.gz";
+    sha256 = "sha256-AdvQqaRTsKTqdfNfFiWtA9mIPVGuui+Ru9TUARVG0+Q=";
   };
 
   nativeBuildInputs = [
